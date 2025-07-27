@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  color: #222;
+  transition: background 0.5s, color 0.5s;
+}
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 2rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  margin: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+}
+button:active {
+  transform: scale(0.97);
+}
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+.sensor-card {
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 30%;
+  transition: background 0.3s;
+}
+body.dark .sensor-card {
+  background: #1e1e1e;
+}
+.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.status {
+  font-weight: 600;
+}
+.actions {
+  text-align: center;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vehicle Sensor Health Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="light">
+  <div class="container">
+    <header>
+      <h1>🚗 Vehicle Sensor Health Dashboard</h1>
+      <button id="modeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <section class="dashboard">
+      <div class="sensor-card" id="engine">
+        <h3>Engine Temp</h3>
+        <p class="value">-- °C</p>
+        <p class="status">Status: --</p>
+      </div>
+      <div class="sensor-card" id="battery">
+        <h3>Battery Health</h3>
+        <p class="value">-- %</p>
+        <p class="status">Status: --</p>
+      </div>
+      <div class="sensor-card" id="brakes">
+        <h3>Brake Wear</h3>
+        <p class="value">-- %</p>
+        <p class="status">Status: --</p>
+      </div>
+    </section>
+
+    <canvas id="sensorChart" height="100"></canvas>
+
+    <div class="actions">
+      <button onclick="simulateData()">📊 Simulate</button>
+      <button onclick="downloadCSV()">💾 Download CSV</button>
+      <button onclick="sendAlert()">✉️ Email Alert</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
